@@ -1,0 +1,499 @@
+LC08_L1TP_152038_20200611_20200611_01_RT: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: LC08_L1TP_152038_20200611_20200611_01_RT
+    description: ''
+    driver: &id001 !!python/name:intake_stac.catalog.StacItem ''
+    catalog:
+      cls: intake_stac.catalog.StacCollection
+      args:
+      - &id002 !!python/object:satstac.collection.Collection
+        _data:
+          description: An example STAC catalog
+          id: stac-catalog
+          links:
+          - href: catalog.json
+            rel: self
+          - href: catalog.json
+            rel: root
+          - href: eo/catalog.json
+            rel: child
+          stac_version: 1.0.0-beta.1
+        filename: https://raw.githubusercontent.com/sat-utils/sat-stac/master/test/catalog/catalog.json
+      kwargs: {}
+    args:
+      stac_obj: https://raw.githubusercontent.com/sat-utils/sat-stac/master/test/catalog/eo/landsat-8-l1/item.json
+LC08_L1TP_152038_20200611_20200611_01_RT.ANG: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - ANG
+  - href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_ANG.txt
+    title: Angle coefficients file
+    type: text/plain
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.B1: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B1
+  - eo:bands:
+    - center_wavelength: 0.44
+      common_name: coastal
+      full_width_half_max: 0.02
+      name: B1
+    href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_B1.TIF
+    plots:
+      geotiff:
+        cmap: viridis
+        data_aspect: 1
+        dynamic: true
+        frame_width: 500
+        kind: image
+        rasterize: true
+        x: x
+        y: y
+    title: Band 1 (coastal)
+    type: image/tiff; application=geotiff
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.B10: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B10
+  - eo:bands:
+    - center_wavelength: 10.9
+      common_name: lwir11
+      full_width_half_max: 0.8
+      name: B10
+    href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_B10.TIF
+    plots:
+      geotiff:
+        cmap: viridis
+        data_aspect: 1
+        dynamic: true
+        frame_width: 500
+        kind: image
+        rasterize: true
+        x: x
+        y: y
+    title: Band 10 (lwir)
+    type: image/tiff; application=geotiff
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.B11: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B11
+  - eo:bands:
+    - center_wavelength: 12
+      common_name: lwir12
+      full_width_half_max: 1
+      name: B11
+    href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_B11.TIF
+    plots:
+      geotiff:
+        cmap: viridis
+        data_aspect: 1
+        dynamic: true
+        frame_width: 500
+        kind: image
+        rasterize: true
+        x: x
+        y: y
+    title: Band 11 (lwir)
+    type: image/tiff; application=geotiff
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.B2: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B2
+  - eo:bands:
+    - center_wavelength: 0.48
+      common_name: blue
+      full_width_half_max: 0.06
+      name: B2
+    href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_B2.TIF
+    plots:
+      geotiff:
+        cmap: viridis
+        data_aspect: 1
+        dynamic: true
+        frame_width: 500
+        kind: image
+        rasterize: true
+        x: x
+        y: y
+    title: Band 2 (blue)
+    type: image/tiff; application=geotiff
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.B3: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B3
+  - eo:bands:
+    - center_wavelength: 0.56
+      common_name: green
+      full_width_half_max: 0.06
+      name: B3
+    href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_B3.TIF
+    plots:
+      geotiff:
+        cmap: viridis
+        data_aspect: 1
+        dynamic: true
+        frame_width: 500
+        kind: image
+        rasterize: true
+        x: x
+        y: y
+    title: Band 3 (green)
+    type: image/tiff; application=geotiff
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.B4: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B4
+  - eo:bands:
+    - center_wavelength: 0.65
+      common_name: red
+      full_width_half_max: 0.04
+      name: B4
+    href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_B4.TIF
+    plots:
+      geotiff:
+        cmap: viridis
+        data_aspect: 1
+        dynamic: true
+        frame_width: 500
+        kind: image
+        rasterize: true
+        x: x
+        y: y
+    title: Band 4 (red)
+    type: image/tiff; application=geotiff
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.B5: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B5
+  - eo:bands:
+    - center_wavelength: 0.86
+      common_name: nir
+      full_width_half_max: 0.03
+      name: B5
+    href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_B5.TIF
+    plots:
+      geotiff:
+        cmap: viridis
+        data_aspect: 1
+        dynamic: true
+        frame_width: 500
+        kind: image
+        rasterize: true
+        x: x
+        y: y
+    title: Band 5 (nir)
+    type: image/tiff; application=geotiff
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.B6: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B6
+  - eo:bands:
+    - center_wavelength: 1.6
+      common_name: swir16
+      full_width_half_max: 0.08
+      name: B6
+    href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_B6.TIF
+    plots:
+      geotiff:
+        cmap: viridis
+        data_aspect: 1
+        dynamic: true
+        frame_width: 500
+        kind: image
+        rasterize: true
+        x: x
+        y: y
+    title: Band 6 (swir16)
+    type: image/tiff; application=geotiff
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.B7: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B7
+  - eo:bands:
+    - center_wavelength: 2.2
+      common_name: swir22
+      full_width_half_max: 0.2
+      name: B7
+    href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_B7.TIF
+    plots:
+      geotiff:
+        cmap: viridis
+        data_aspect: 1
+        dynamic: true
+        frame_width: 500
+        kind: image
+        rasterize: true
+        x: x
+        y: y
+    title: Band 7 (swir22)
+    type: image/tiff; application=geotiff
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.B8: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B8
+  - eo:bands:
+    - center_wavelength: 0.59
+      common_name: pan
+      full_width_half_max: 0.18
+      name: B8
+    href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_B8.TIF
+    plots:
+      geotiff:
+        cmap: viridis
+        data_aspect: 1
+        dynamic: true
+        frame_width: 500
+        kind: image
+        rasterize: true
+        x: x
+        y: y
+    title: Band 8 (pan)
+    type: image/tiff; application=geotiff
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.B9: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B9
+  - eo:bands:
+    - center_wavelength: 1.37
+      common_name: cirrus
+      full_width_half_max: 0.02
+      name: B9
+    href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_B9.TIF
+    plots:
+      geotiff:
+        cmap: viridis
+        data_aspect: 1
+        dynamic: true
+        frame_width: 500
+        kind: image
+        rasterize: true
+        x: x
+        y: y
+    title: Band 9 (cirrus)
+    type: image/tiff; application=geotiff
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.BQA: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - BQA
+  - href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_BQA.TIF
+    plots:
+      geotiff:
+        cmap: viridis
+        data_aspect: 1
+        dynamic: true
+        frame_width: 500
+        kind: image
+        rasterize: true
+        x: x
+        y: y
+    title: Band quality data
+    type: image/tiff; application=geotiff
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.MTL: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - MTL
+  - href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_MTL.txt
+    title: original metadata file
+    type: text/plain
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.index: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - index
+  - href: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC81530252014153LGN00/index.html
+    title: HTML index page
+    type: text/html
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+LC08_L1TP_152038_20200611_20200611_01_RT.thumbnail: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - thumbnail
+  - href: https://landsat-pds.s3.amazonaws.com/c1/L8/152/038/LC08_L1TP_152038_20200611_20200611_01_RT/LC08_L1TP_152038_20200611_20200611_01_RT_thumb_large.jpg
+    plots:
+      thumbnail:
+        bands: channel
+        data_aspect: 1
+        flip_yaxis: true
+        kind: rgb
+        x: x
+        xaxis: false
+        y: y
+        yaxis: false
+    title: Thumbnail image
+    type: image/jpeg
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: S2B_25WFU_20200610_0_L1C
+    description: ''
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCollection
+      args:
+      - *id002
+      kwargs: {}
+    args:
+      stac_obj: https://raw.githubusercontent.com/sat-utils/sat-stac/master/test/catalog/eo/sentinel-2-l1c/sentinel-2a/item.json
+S2B_25WFU_20200610_0_L1C.B01: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B01
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B01.jp2
+    title: Band 1 (coastal)
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.B02: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B02
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B02.jp2
+    title: Band 2 (blue)
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.B03: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B03
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B03.jp2
+    title: Band 3 (green)
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.B04: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B04
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B04.jp2
+    title: Band 4 (red)
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.B05: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B05
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B05.jp2
+    title: Band 5
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.B06: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B06
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B06.jp2
+    title: Band 6
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.B07: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B07
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B07.jp2
+    title: Band 7
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.B08: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B08
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B08.jp2
+    title: Band 8 (nir)
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.B09: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B09
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B09.jp2
+    title: Band 9
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.B10: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B10
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B10.jp2
+    title: Band 10 (cirrus)
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.B11: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B11
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B11.jp2
+    title: Band 11 (swir16)
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.B12: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B12
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B12.jp2
+    title: Band 12 (swir22)
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.B8A: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - B8A
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/B8A.jp2
+    title: Band 8A
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.info: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - info
+  - href: https://roda.sentinel-hub.com/sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/tileInfo.json
+    title: Original JSON metadata
+    type: application/json
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.metadata: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - metadata
+  - href: https://roda.sentinel-hub.com/sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/metadata.xml
+    title: Original XML metadata
+    type: application/xml
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.overview: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - overview
+  - href: s3://sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/TCI.jp2
+    title: True color image
+    type: image/jp2
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
+S2B_25WFU_20200610_0_L1C.thumbnail: !!python/object:intake_stac.catalog.StacEntry
+  args:
+  - thumbnail
+  - href: https://roda.sentinel-hub.com/sentinel-s2-l1c/tiles/25/W/FU/2020/6/10/0/preview.jpg
+    plots:
+      thumbnail:
+        bands: channel
+        data_aspect: 1
+        flip_yaxis: true
+        kind: rgb
+        x: x
+        xaxis: false
+        y: y
+        yaxis: false
+    title: Thumbnail
+    type: image/png
+  cls: intake_stac.catalog.StacEntry
+  kwargs: {}
