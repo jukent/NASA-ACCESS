@@ -1,14 +1,574 @@
-test: !!python/object:intake.catalog.local.LocalCatalogEntry
+3dep-seamless: !!python/object:intake.catalog.local.LocalCatalogEntry
   args: []
   cls: intake.catalog.local.LocalCatalogEntry
   kwargs:
-    name: test
-    description: child catalog
-    driver: !!python/name:intake_stac.catalog.StacCatalog ''
+    name: 3dep-seamless
+    description: The [USGS 3D Elevation Program (3DEP) Datasets](https://www.usgs.gov/core-science-systems/ngp/3dep)
+      from [The National Map](https://www.usgs.gov/core-science-systems/national-geospatial-program/national-map)
+      are the primary elevation data product produced and distributed by the USGS.
+      The 3DEP program provides a variety of resolution raster elevation data of the
+      conterminous United States, Alaska, Hawaii, and the island territories. Some
+      of the data sets such as the 1/3rd arc-second and 1 arc-second data set are
+      derived from diverse source data sets that are processed to a specification
+      with a consistent resolution, coordinate system, elevation units, and horizontal
+      and vertical datums.\n\nThe seamless DEM layers under the 3DEP program are a
+      multi-resolution dataset that is updated continuously to integrate newly available,
+      improved elevation source data. Seamless DEM data layers under the 3DEP program  are
+      available nationally at grid spacings of 1 arc-second (approximately 30 meters)
+      for the conterminous United States, and at 1/3, 1/9 arc-seconds  (approximately
+      10 and 3 meters, respectively) and 1 meter for parts of the United States. Most
+      seamless DEM data for Alaska is available at 2-arc-second (about 60 meters)
+      grid spacing, where only lower resolution source data exist. Part of Alaska
+      is available at the 1/3 arc-second, 1 arc-second and 5 meter resolution.\n
+    driver: &id001 !!python/name:intake_stac.catalog.StacCollection ''
     catalog:
       cls: intake_stac.catalog.StacCatalog
       args:
-      - https://raw.githubusercontent.com/intake/intake-stac/main/intake_stac/tests/data/1.0.0/catalog/catalog.json
+      - https://planetarycomputer.microsoft.com/api/stac/v1
       kwargs: {}
     args:
-      stac_obj: https://raw.githubusercontent.com/intake/intake-stac/main/intake_stac/tests/data/1.0.0/catalog/child-catalog.json
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/3dep-seamless
+aster-l1t: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: aster-l1t
+    description: The [ASTER](https://terra.nasa.gov/about/terra-instruments/aster)
+      instrument, launched on-board NASA's [Terra](https://terra.nasa.gov/) satellite
+      in 1999, provides multispectral images of the Earth at 15m-90m resolution.  ASTER
+      images provide information about land surface temperature, color, elevation,
+      and mineral composition.\n\nThis dataset represents ASTER [L1T](https://lpdaac.usgs.gov/products/ast_l1tv003/)
+      data from 2000-2006.  L1T images have been terrain-corrected and rotated to
+      a north-up UTM projection.  Images are in [cloud-optimized GeoTIFF](https://www.cogeo.org/)
+      format.\n
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/aster-l1t
+daymet-annual-hi: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: daymet-annual-hi
+    description: 'Annual climate summaries derived from Daymet Version 4 daily data
+      at a 1 km x 1 km spatial resolution for five Daymet variables: minimum and maximum
+      temperature, precipitation, vapor pressure, and snow water equivalent. Annual
+      averages are provided for minimum and maximum temperature, vapor pressure, and
+      snow water equivalent, and annual totals are provided for the precipitation
+      variable.\n\nThis dataset provides coverage for Hawaii - North America and Puerto
+      Rico are provided in [separate datasets](https://planetarycomputer.microsoft.com/dataset/group/daymet#annual).
+      [Daymet](https://daymet.ornl.gov/) provides measurements of near-surface meteorological
+      conditions; the main purpose is to provide data estimates where no instrumentation
+      exists. The dataset covers the period from January 1, 1980 to the present. Each
+      year is processed individually at the close of a calendar year. Data are in
+      a Lambert Conformal Conic projection for North America and are distributed in
+      Zarr and netCDF format compliant with [Climate and Forecast (CF) metadata conventions
+      (version 1.6)](http://cfconventions.org/).\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/daymet-annual-hi
+daymet-annual-na: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: daymet-annual-na
+    description: 'Annual climate summaries derived from Daymet Version 4 daily data
+      at a 1 km x 1 km spatial resolution for five Daymet variables: minimum and maximum
+      temperature, precipitation, vapor pressure, and snow water equivalent. Annual
+      averages are provided for minimum and maximum temperature, vapor pressure, and
+      snow water equivalent, and annual totals are provided for the precipitation
+      variable.\n\nThis dataset provides coverage for North America - Hawaii and Puerto
+      Rico are provided in [separate datasets](https://planetarycomputer.microsoft.com/dataset/group/daymet#annual).
+      [Daymet](https://daymet.ornl.gov/) provides measurements of near-surface meteorological
+      conditions; the main purpose is to provide data estimates where no instrumentation
+      exists. The dataset covers the period from January 1, 1980 to the present. Each
+      year is processed individually at the close of a calendar year. Data are in
+      a Lambert Conformal Conic projection for North America and are distributed in
+      Zarr and netCDF format compliant with [Climate and Forecast (CF) metadata conventions
+      (version 1.6)](http://cfconventions.org/).\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/daymet-annual-na
+daymet-annual-pr: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: daymet-annual-pr
+    description: 'Annual climate summaries derived from Daymet Version 4 daily data
+      at a 1 km x 1 km spatial resolution for five Daymet variables: minimum and maximum
+      temperature, precipitation, vapor pressure, and snow water equivalent. Annual
+      averages are provided for minimum and maximum temperature, vapor pressure, and
+      snow water equivalent, and annual totals are provided for the precipitation
+      variable.\n\nThis dataset provides coverage for Puerto Rico - Hawaii and North
+      America are provided in [separate datasets](https://planetarycomputer.microsoft.com/dataset/group/daymet#annual).
+      [Daymet](https://daymet.ornl.gov/) provides measurements of near-surface meteorological
+      conditions; the main purpose is to provide data estimates where no instrumentation
+      exists. The dataset covers the period from January 1, 1980 to the present. Each
+      year is processed individually at the close of a calendar year. Data are in
+      a Lambert Conformal Conic projection for North America and are distributed in
+      Zarr and netCDF format compliant with [Climate and Forecast (CF) metadata conventions
+      (version 1.6)](http://cfconventions.org/).\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/daymet-annual-pr
+daymet-daily-hi: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: daymet-daily-hi
+    description: 'Gridded estimates of daily weather parameters. Daymet Version 4
+      variables include the following parameters: minimum temperature, maximum temperature,
+      precipitation, shortwave radiation, vapor pressure, snow water equivalent, and
+      day length.\n\nThis dataset provides coverage for Hawaii - North America and
+      Puerto Rico are provided in [separate datasets](https://planetarycomputer.microsoft.com/dataset/group/daymet#daily).
+      [Daymet](https://daymet.ornl.gov/) provides measurements of near-surface meteorological
+      conditions; the main purpose is to provide data estimates where no instrumentation
+      exists. The dataset covers the period from January 1, 1980 to the present. Each
+      year is processed individually at the close of a calendar year. Data are in
+      a Lambert Conformal Conic projection for North America and are distributed in
+      Zarr and netCDF format compliant with [Climate and Forecast (CF) metadata conventions
+      (version 1.6)](http://cfconventions.org/).\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/daymet-daily-hi
+daymet-daily-na: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: daymet-daily-na
+    description: 'Gridded estimates of daily weather parameters. Daymet Version 4
+      variables include the following parameters: minimum temperature, maximum temperature,
+      precipitation, shortwave radiation, vapor pressure, snow water equivalent, and
+      day length.\n\nThis dataset provides coverage for North America - Hawaii and
+      Puerto Rico are provided in [separate datasets](https://planetarycomputer.microsoft.com/dataset/group/daymet#daily).
+      [Daymet](https://daymet.ornl.gov/) provides measurements of near-surface meteorological
+      conditions; the main purpose is to provide data estimates where no instrumentation
+      exists. The dataset covers the period from January 1, 1980 to the present. Each
+      year is processed individually at the close of a calendar year. Data are in
+      a Lambert Conformal Conic projection for North America and are distributed in
+      Zarr and netCDF format compliant with [Climate and Forecast (CF) metadata conventions
+      (version 1.6)](http://cfconventions.org/).\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/daymet-daily-na
+daymet-daily-pr: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: daymet-daily-pr
+    description: 'Gridded estimates of daily weather parameters. Daymet Version 4
+      variables include the following parameters: minimum temperature, maximum temperature,
+      precipitation, shortwave radiation, vapor pressure, snow water equivalent, and
+      day length.\n\nThis dataset provides coverage for Puerto Rico - Hawaii and North
+      America are provided in [separate datasets](https://planetarycomputer.microsoft.com/dataset/group/daymet#daily).
+      [Daymet](https://daymet.ornl.gov/) provides measurements of near-surface meteorological
+      conditions; the main purpose is to provide data estimates where no instrumentation
+      exists. The dataset covers the period from January 1, 1980 to the present. Each
+      year is processed individually at the close of a calendar year. Data are in
+      a Lambert Conformal Conic projection for North America and are distributed in
+      Zarr and netCDF format compliant with [Climate and Forecast (CF) metadata conventions
+      (version 1.6)](http://cfconventions.org/).\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/daymet-daily-pr
+daymet-monthly-hi: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: daymet-monthly-hi
+    description: 'Monthly climate summaries derived from Daymet Version 4 daily data
+      at a 1 km x 1 km spatial resolution for five Daymet variables: minimum and maximum
+      temperature, precipitation, vapor pressure, and snow water equivalent. Monthly
+      averages are provided for minimum and maximum temperature, vapor pressure, and
+      snow water equivalent, and monthly totals are provided for the precipitation
+      variable.\n\nThis dataset provides coverage for Hawaii - North America and Puerto
+      Rico are provided in [separate datasets](https://planetarycomputer.microsoft.com/dataset/group/daymet#monthly).
+      [Daymet](https://daymet.ornl.gov/) provides measurements of near-surface meteorological
+      conditions; the main purpose is to provide data estimates where no instrumentation
+      exists. The dataset covers the period from January 1, 1980 to the present. Each
+      year is processed individually at the close of a calendar year. Data are in
+      a Lambert Conformal Conic projection for North America and are distributed in
+      Zarr and netCDF format compliant with [Climate and Forecast (CF) metadata conventions
+      (version 1.6)](http://cfconventions.org/).\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/daymet-monthly-hi
+daymet-monthly-na: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: daymet-monthly-na
+    description: 'Monthly climate summaries derived from Daymet Version 4 daily data
+      at a 1 km x 1 km spatial resolution for five Daymet variables: minimum and maximum
+      temperature, precipitation, vapor pressure, and snow water equivalent. Monthly
+      averages are provided for minimum and maximum temperature, vapor pressure, and
+      snow water equivalent, and monthly totals are provided for the precipitation
+      variable.\n\nThis dataset provides coverage for North America - Hawaii and Puerto
+      Rico are provided in [separate datasets](https://planetarycomputer.microsoft.com/dataset/group/daymet#monthly).
+      [Daymet](https://daymet.ornl.gov/) provides measurements of near-surface meteorological
+      conditions; the main purpose is to provide data estimates where no instrumentation
+      exists. The dataset covers the period from January 1, 1980 to the present. Each
+      year is processed individually at the close of a calendar year. Data are in
+      a Lambert Conformal Conic projection for North America and are distributed in
+      Zarr and netCDF format compliant with [Climate and Forecast (CF) metadata conventions
+      (version 1.6)](http://cfconventions.org/).\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/daymet-monthly-na
+daymet-monthly-pr: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: daymet-monthly-pr
+    description: 'Monthly climate summaries derived from Daymet Version 4 daily data
+      at a 1 km x 1 km spatial resolution for five Daymet variables: minimum and maximum
+      temperature, precipitation, vapor pressure, and snow water equivalent. Monthly
+      averages are provided for minimum and maximum temperature, vapor pressure, and
+      snow water equivalent, and monthly totals are provided for the precipitation
+      variable.\n\nThis dataset provides coverage for Puerto Rico - Hawaii and North
+      America are provided in [separate datasets](https://planetarycomputer.microsoft.com/dataset/group/daymet#monthly).
+      [Daymet](https://daymet.ornl.gov/) provides measurements of near-surface meteorological
+      conditions; the main purpose is to provide data estimates where no instrumentation
+      exists. The dataset covers the period from January 1, 1980 to the present. Each
+      year is processed individually at the close of a calendar year. Data are in
+      a Lambert Conformal Conic projection for North America and are distributed in
+      Zarr and netCDF format compliant with [Climate and Forecast (CF) metadata conventions
+      (version 1.6)](http://cfconventions.org/).\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/daymet-monthly-pr
+gap: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: gap
+    description: The USGS GAP/LANDFIRE National Terrestrial Ecosystems data, based
+      on the NatureServe Ecological Systems Classification, are the foundation of
+      the most detailed, consistent map of vegetation available for the United States.  These
+      data facilitate planning and management for biological diversity on a regional
+      and national scale.\n\nThis dataset includes the land cover component of the
+      GAP Analyais project.\n\n
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/gap
+hgb: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: hgb
+    description: This dataset provides temporally consistent and harmonized global
+      maps of aboveground and belowground biomass carbon density for the year 2010
+      at 300m resolution. The aboveground biomass map integrates land-cover specific,
+      remotely sensed maps of woody, grassland, cropland, and tundra biomass. Input
+      maps were amassed from the published literature and, where necessary, updated
+      to cover the focal extent or time period. The belowground biomass map similarly
+      integrates matching maps derived from each aboveground biomass map and land-cover
+      specific empirical models. Aboveground and belowground maps were then integrated
+      separately using ancillary maps of percent tree cover and land cover and a rule-based
+      decision tree. Maps reporting the accumulated uncertainty of pixel-level estimates
+      are also provided.\n
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/hgb
+hrea: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: hrea
+    description: 'The [HREA](http://www-personal.umich.edu/~brianmin/HREA/index.html)
+      project aims to provide open access to new indicators of electricity access
+      and reliability across the world. Leveraging satellite imagery with computational
+      methods, these high-resolution data provide new tools to track progress toward
+      reliable and sustainable energy access across the world.\n\nThis dataset includes
+      settlement-level measures of electricity access, reliability, and usage for
+      several nations in Africa (plus Ecuador), derived from the complete archive
+      of nightly VIIRS satellite imagery. Specifically, this dataset provides the
+      following annual values at country-level granularity:\n\n1. **Access**: Predicted
+      likelihood that a settlement is electrified, based on night-by-night comparisons
+      of each settlement against matched uninhabited areas over a calendar year.\n\n2.
+      **Reliability**: Proportion of nights a settlement is statistically brighter
+      than matched uninhabited areas. Areas with more frequent power outages or service
+      interruptions have lower rates.\n\n3. **Usage**: Higher levels of brightness
+      indicate more robust usage of outdoor lighting, which is highly correlated with
+      overall energy consumption.\n\n4. **Nighttime Lights**: Annual composites of
+      VIIRS nighttime light output.\n\nFor more information and methodology, please
+      visit the [HREA website](http://www-personal.umich.edu/~brianmin/HREA/index.html).'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/hrea
+io-lulc: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: io-lulc
+    description: Global estimates of 10-class land use/land cover (LULC) for 2020,
+      derived from ESA Sentinel-2 imagery at 10m resolution.  This dataset was generated
+      by [Impact Observatory](http://impactobservatory.com/), who used billions of
+      human-labeled pixels (curated by the National Geographic Society) to train a
+      deep learning model for land classification.  The global map was produced by
+      applying this model to the Sentinel-2 2020 scene collection on the Planetary
+      Computer.\n\nThis dataset is also available on the [ArcGIS Living Atlas of the
+      World](https://livingatlas.arcgis.com/landcover/).\n\n
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/io-lulc
+jrc-gsw: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: jrc-gsw
+    description: 'Global Surface Water products from the European Commission Joint
+      Research Centre. This collection presents surface water products between 1984-2020
+      from Landsat 5,7, and 8 sensors.\n\nThis Collection has the following assets:\n\n-
+      __Water Occurrence__: shows where surface water occurred between 1984 and 2020
+      and provides information concerning overall water dynamics. This product captures
+      both the intra and inter-annual variability and changes.\n- __Occurrence Change
+      Intensity__: provides information on where surface water occurrence increased,
+      decreased or remained the same between 1984-1999 and 2000-2020. Both the direction
+      of change and its intensity are documented.\n\n- __Seasonality__: provides information
+      concerning the intra-annual behaviour of water surfaces for a single year (2020)
+      and shows permanent and seasonal water and the number of months water was present.\n\n-
+      __Recurrence__: provides information concerning the inter-annual behavior of
+      water surfaces and captures the frequency with which water returns from year
+      to year.\n\n- __Transitions__: The Transitions map provides information on the
+      change in seasonality between the first and last years and captures changes
+      between the three classes of not water, seasonal water and permanent water.\n\n-
+      __Maximum water extent__: The Maximum Water Extent provides information on all
+      the locations ever detected as water over the 32-year period. It is the union
+      of all of the other datasets.\n\nSource: [User Guide](https://storage.cloud.google.com/global-surface-water/downloads_ancillary/DataUsersGuidev2020.pdf)'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/jrc-gsw
+landsat-8-c2-l2: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: landsat-8-c2-l2
+    description: 'The [Landsat](https://landsat.gsfc.nasa.gov/) program has been imaging
+      the Earth since 1972; it provides a comprehensive, continuous archive of the
+      Earth''s surface.  [Landsat 8](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-8)
+      is the most recent satellite in the Landsat series.  Launched in 2013, Landsat
+      8 captures data in eleven spectral bands: ten optical/IR bands from the [Operational
+      Land Imager](https://landsat.gsfc.nasa.gov/landsat-8/operational-land-imager)
+      (OLI) instrument, and two thermal bands from the [Thermal Infrared Sensor](https://landsat.gsfc.nasa.gov/landsat-8/thermal-infrared-sensor-tirs)
+      (TIRS) instrument.\n\nThis dataset represents the global archive of Level-2
+      Landsat 8 data from [Landsat Collection 2](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-collection-2).  Because
+      there is some latency before Level-2 data is available, a rolling window of
+      recent Level-1 data is available as well.  Images are stored in [cloud-optimized
+      GeoTIFF](https://www.cogeo.org/) format.\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-8-c2-l2
+mobi: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: mobi
+    description: 'The [Map of Biodiversity Importance](https://www.natureserve.org/conservation-tools/projects/map-biodiversity-importance)
+      (MoBI) consists of a series of raster maps that combine habitat information
+      for 2,216 imperiled species occurring in the conterminous United States, using
+      weightings based on range size and degree of protection to identify areas of
+      high importance for biodiversity conservation. Species included in the project
+      are those which, as of September 2018, had a global conservation status of G1
+      (critical imperiled) or G2 (imperiled) or which are listed as threatened or
+      endangered at the full species level under the United States Endangered Species
+      Act. Taxonomic groups included in the project are vertebrates (birds, mammals,
+      amphibians, reptiles, turtles, crocodilians, and freshwater and anadromous fishes),
+      vascular plants, selected aquatic invertebrates (freshwater mussels and crayfish)
+      and selected pollinators (bumblebees, butterflies, and skippers).\n\nThere are
+      three types of spatial data provided, described in more detail below: species
+      richness, range-size rarity, and protection-weighted range-size rarity.  For
+      each type, this data set includes five different layers &ndash; one for all
+      species combined, and four additional tiffs that break the data down by taxonomic
+      group (vertebrates, plants, freshwater invertebrates, and pollinators) &ndash;
+      for a total of fifteen layers.\n\nThese data layers are intended to identify
+      areas of high potential value for on-the-ground biodiversity protection efforts.
+      As a synthesis of predictive models, they cannot guarantee either the presence
+      or absence of imperiled species at a given location. For site-specific decision-making,
+      these data should be used in conjunction with field surveys and/or documented
+      occurrence data, such as is available from the NatureServe Network.\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/mobi
+mtbs: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: mtbs
+    description: '[Monitoring Trends in Burn Severity](https://www.mtbs.gov/) (MTBS)
+      is an inter-agency program whose goal is to consistently map the burn severity
+      and extent of large fires across the United States from 1984 to the present.
+      This includes all fires 1000 acres or greater in the Western United States and
+      500 acres or greater in the Eastern United States.  The burn severity mosaics
+      in this dataset consist of thematic raster images of MTBS burn severity classes
+      for all currently completed MTBS fires for the continental United States and
+      Alaska.\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/mtbs
+naip: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: naip
+    description: The [National Agriculture Imagery Program](https://www.fsa.usda.gov/programs-and-services/aerial-photography/imagery-programs/naip-imagery/)
+      (NAIP) provides US-wide, high-resolution aerial imagery, with four spectral
+      bands (R, G, B, IR).  NAIP is administered by the [Aerial Field Photography
+      Office](https://www.fsa.usda.gov/programs-and-services/aerial-photography/)
+      (AFPO) within the [US Department of Agriculture](https://www.usda.gov/) (USDA).  Data
+      are captured at least once every three years for each state.  This dataset represents
+      NAIP data from 2010-present, in [cloud-optimized GeoTIFF](https://www.cogeo.org/)
+      format.\n
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip
+nasadem: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: nasadem
+    description: '[NASADEM](https://earthdata.nasa.gov/esds/competitive-programs/measures/nasadem)
+      provides global topographic data at 1 arc-second (~30m) horizontal resolution,
+      derived primarily from data captured via the [Shuttle Radar Topography Mission](https://www2.jpl.nasa.gov/srtm/)
+      (SRTM).\n\n'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/nasadem
+sentinel-2-l2a: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: sentinel-2-l2a
+    description: The [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2)
+      program provides global imagery in thirteen spectral bands at 10m-60m resolution
+      and a revisit time of approximately five days.  This dataset represents the
+      global Sentinel-2 archive, from 2016 to the present, processed to L2A (bottom-of-atmosphere)
+      using [Sen2Cor](https://step.esa.int/main/snap-supported-plugins/sen2cor/) and
+      converted to [cloud-optimized GeoTIFF](https://www.cogeo.org/) format.
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-2-l2a
+terraclimate: !!python/object:intake.catalog.local.LocalCatalogEntry
+  args: []
+  cls: intake.catalog.local.LocalCatalogEntry
+  kwargs:
+    name: terraclimate
+    description: '[TerraClimate](http://www.climatologylab.org/terraclimate.html)
+      is a dataset of monthly climate and climatic water balance for global terrestrial
+      surfaces from 1958-2019. These data provide important inputs for ecological
+      and hydrological studies at global scales that require high spatial resolution
+      and time-varying data. All data have monthly temporal resolution and a ~4-km
+      (1/24th degree) spatial resolution. The data cover the period from 1958-2019.
+      The data is provided in [Zarr](https://zarr.readthedocs.io/) format.'
+    driver: *id001
+    catalog:
+      cls: intake_stac.catalog.StacCatalog
+      args:
+      - https://planetarycomputer.microsoft.com/api/stac/v1
+      kwargs: {}
+    args:
+      stac_obj: https://planetarycomputer.microsoft.com/api/stac/v1/collections/terraclimate
