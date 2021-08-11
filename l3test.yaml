@@ -1,5 +1,3 @@
-metadata:
-  version: 1
 sources:
   proj-example:
     driver: intake_stac.catalog.StacItem
@@ -150,69 +148,3 @@ sources:
       catalog_dir: ''
     args:
       name: proj-example
-    B1:
-      stac_asset:
-        driver: intake_xarray.raster.RasterIOSource
-        description: Band 1 (coastal)
-        metadata:
-          href: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/LC08_L1TP_107018_20181001_20181001_01_RT_B1.TIF
-          type: image/tiff; application=geotiff
-          title: Band 1 (coastal)
-          eo:bands:
-          - name: B1
-            common_name: coastal
-            center_wavelength: 0.44
-            full_width_half_max: 0.02
-          plots:
-            geotiff:
-              kind: image
-              x: x
-              y: y
-              frame_width: 500
-              data_aspect: 1
-              rasterize: true
-              dynamic: true
-              cmap: viridis
-          catalog_dir: ''
-        args:
-          urlpath: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/LC08_L1TP_107018_20181001_20181001_01_RT_B1.TIF
-          chunks: {}
-    B8:
-      stac_asset:
-        driver: intake_xarray.raster.RasterIOSource
-        description: Band 8 (panchromatic)
-        metadata:
-          href: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/LC08_L1TP_107018_20181001_20181001_01_RT_B8.TIF
-          type: image/tiff; application=geotiff
-          title: Band 8 (panchromatic)
-          eo:bands:
-          - name: B8
-            center_wavelength: 0.59
-            full_width_half_max: 0.18
-          proj:shape:
-          - 16781
-          - 16621
-          proj:transform:
-          - 15
-          - 0
-          - 224992.5
-          - 0
-          - -15
-          - 6790207.5
-          - 0
-          - 0
-          - 1
-          plots:
-            geotiff:
-              kind: image
-              x: x
-              y: y
-              frame_width: 500
-              data_aspect: 1
-              rasterize: true
-              dynamic: true
-              cmap: viridis
-          catalog_dir: ''
-        args:
-          urlpath: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/LC08_L1TP_107018_20181001_20181001_01_RT_B8.TIF
-          chunks: {}
