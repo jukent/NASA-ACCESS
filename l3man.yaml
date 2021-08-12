@@ -1,0 +1,89 @@
+metadata:
+  version: 1
+sources:
+  proj-example:
+    args:
+      name: proj-example
+      stac_obj: 
+        assets:
+          B1:
+            description: null
+            extra_fields:
+              eo:bands:
+              - center_wavelength: 0.44
+                common_name: coastal
+                full_width_half_max: 0.02
+                name: B1
+            href: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/LC08_L1TP_107018_20181001_20181001_01_RT_B1.TIF
+            media_type: image/tiff; application=geotiff
+            owner:
+            roles: null
+            title: Band 1 (coastal)
+          B8: 
+            description: null
+            extra_fields:
+              eo:bands:
+              - center_wavelength: 0.59
+                full_width_half_max: 0.18
+                name: B8
+              proj:shape:
+              - 16781
+              - 16621
+              proj:transform:
+              - 15
+              - 0
+              - 224992.5
+              - 0
+              - -15
+              - 6790207.5
+              - 0
+              - 0
+              - 1
+            href: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/LC08_L1TP_107018_20181001_20181001_01_RT_B8.TIF
+            media_type: image/tiff; application=geotiff
+            owner:
+            roles: null
+            title: Band 8 (panchromatic)
+        bbox:
+        - 148.13933
+        - 59.51584
+        - 152.52758
+        - 60.63437
+        collection_id: landsat-8-l1
+        datetime:
+        extra_fields:
+          stac_extensions:
+          - https://stac-extensions.github.io/eo/v1.0.0/schema.json
+          - https://stac-extensions.github.io/projection/v1.0.0/schema.json
+        geometry:
+          coordinates:
+          - - - 152.52758
+              - 60.63437
+            - - 149.1755
+              - 61.19016
+            - - 148.13933
+              - 59.51584
+            - - 151.33786
+              - 58.97792
+            - - 152.52758
+              - 60.63437
+          type: Polygon
+        id: proj-example
+        stac_extensions:
+    description: ''
+    driver: intake_stac.catalog.StacItem
+    metadata:
+      bbox:
+      catalog_dir: ''
+      date: null
+      datetime:
+      geometry:
+      proj:bbox:
+      proj:centroid:
+      proj:epsg: 32614
+      proj:geometry:
+      proj:projjson:
+      proj:shape:
+      proj:transform:
+      proj:wkt2: PROJCS["WGS 84 / UTM zone 14N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS
+        84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],UNIT["metre",1,AUTHORITY["EPSG","9001"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-99],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],AUTHORITY["EPSG","32614"],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
