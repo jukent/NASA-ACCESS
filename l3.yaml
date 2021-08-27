@@ -1,431 +1,210 @@
 metadata:
+  bbox:
+  - 148.13933
+  - 59.51584
+  - 152.52758
+  - 60.63437
+  catalog_dir: ''
+  date: null
+  datetime: 2018-10-01 01:08:32.033000+00:00
+  geometry:
+    coordinates:
+    - - - 152.52758
+        - 60.63437
+      - - 149.1755
+        - 61.19016
+      - - 148.13933
+        - 59.51584
+      - - 151.33786
+        - 58.97792
+      - - 152.52758
+        - 60.63437
+    type: Polygon
+  proj:bbox:
+  - 169200
+  - 3712800
+  - 403200
+  - 3951000
+  proj:centroid:
+    lat: 34.595302781575604
+    lon: -101.34448382627504
+  proj:epsg: 32614
+  proj:geometry:
+    coordinates:
+    - - - 169200
+        - 3712800
+      - - 403200
+        - 3712800
+      - - 403200
+        - 3951000
+      - - 169200
+        - 3951000
+      - - 169200
+        - 3712800
+    type: Polygon
+  proj:projjson:
+    $schema: https://proj.org/schemas/v0.2/projjson.schema.json
+    area: "World - N hemisphere - 102\xB0W to 96\xB0W - by country"
+    base_crs:
+      coordinate_system:
+        axis:
+        - abbreviation: Lat
+          direction: north
+          name: Geodetic latitude
+          unit: degree
+        - abbreviation: Lon
+          direction: east
+          name: Geodetic longitude
+          unit: degree
+        subtype: ellipsoidal
+      datum:
+        ellipsoid:
+          inverse_flattening: 298.257223563
+          name: WGS 84
+          semi_major_axis: 6378137
+        name: World Geodetic System 1984
+        type: GeodeticReferenceFrame
+      id:
+        authority: EPSG
+        code: 4326
+      name: WGS 84
+    bbox:
+      east_longitude: -96
+      north_latitude: 84
+      south_latitude: 0
+      west_longitude: -102
+    conversion:
+      method:
+        id:
+          authority: EPSG
+          code: 9807
+        name: Transverse Mercator
+      name: UTM zone 14N
+      parameters:
+      - id:
+          authority: EPSG
+          code: 8801
+        name: Latitude of natural origin
+        unit: degree
+        value: 0
+      - id:
+          authority: EPSG
+          code: 8802
+        name: Longitude of natural origin
+        unit: degree
+        value: -99
+      - id:
+          authority: EPSG
+          code: 8805
+        name: Scale factor at natural origin
+        unit: unity
+        value: 0.9996
+      - id:
+          authority: EPSG
+          code: 8806
+        name: False easting
+        unit: metre
+        value: 500000
+      - id:
+          authority: EPSG
+          code: 8807
+        name: False northing
+        unit: metre
+        value: 0
+    coordinate_system:
+      axis:
+      - abbreviation: E
+        direction: east
+        name: Easting
+        unit: metre
+      - abbreviation: N
+        direction: north
+        name: Northing
+        unit: metre
+      subtype: Cartesian
+    id:
+      authority: EPSG
+      code: 32614
+    name: WGS 84 / UTM zone 14N
+    type: ProjectedCRS
+  proj:shape:
+  - 8391
+  - 8311
+  proj:transform:
+  - 30
+  - 0
+  - 224985
+  - 0
+  - -30
+  - 6790215
+  - 0
+  - 0
+  - 1
+  proj:wkt2: PROJCS["WGS 84 / UTM zone 14N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS
+    84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],UNIT["metre",1,AUTHORITY["EPSG","9001"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-99],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],AUTHORITY["EPSG","32614"],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
   version: 1
 sources:
-  proj-example:
+  B1:
     args:
-      name: proj-example
-      stac_obj: &id001 !!python/object:pystac.item.Item
-        assets:
-          B1: !!python/object:pystac.asset.Asset
-            description: null
-            extra_fields:
-              eo:bands:
-              - center_wavelength: 0.44
-                common_name: coastal
-                full_width_half_max: 0.02
-                name: B1
-            href: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/LC08_L1TP_107018_20181001_20181001_01_RT_B1.TIF
-            media_type: image/tiff; application=geotiff
-            owner: *id001
-            roles: null
-            title: Band 1 (coastal)
-          B8: !!python/object:pystac.asset.Asset
-            description: null
-            extra_fields:
-              eo:bands:
-              - center_wavelength: 0.59
-                full_width_half_max: 0.18
-                name: B8
-              proj:shape:
-              - 16781
-              - 16621
-              proj:transform:
-              - 15
-              - 0
-              - 224992.5
-              - 0
-              - -15
-              - 6790207.5
-              - 0
-              - 0
-              - 1
-            href: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/LC08_L1TP_107018_20181001_20181001_01_RT_B8.TIF
-            media_type: image/tiff; application=geotiff
-            owner: *id001
-            roles: null
-            title: Band 8 (panchromatic)
-        bbox: &id009
-        - 148.13933
-        - 59.51584
-        - 152.52758
-        - 60.63437
-        collection_id: landsat-8-l1
-        datetime: &id010 2018-10-01 01:08:32.033000+00:00
-        extra_fields:
-          stac_extensions: &id008
-          - https://stac-extensions.github.io/eo/v1.0.0/schema.json
-          - https://stac-extensions.github.io/projection/v1.0.0/schema.json
-        geometry: &id011
-          coordinates:
-          - - - 152.52758
-              - 60.63437
-            - - 149.1755
-              - 61.19016
-            - - 148.13933
-              - 59.51584
-            - - 151.33786
-              - 58.97792
-            - - 152.52758
-              - 60.63437
-          type: Polygon
-        id: proj-example
-        links:
-        - !!python/object:pystac.link.Link
-          _target_href: null
-          _target_object: &id003 !!python/object:pystac.catalog.Catalog
-            _resolved_objects: &id002 !!python/object:pystac.cache.ResolvedObjectCache
-              _collection_cache: !!python/object:pystac.cache.ResolvedObjectCollectionCache
-                cached_hrefs: {}
-                cached_ids: {}
-                resolved_object_cache: *id002
-              hrefs_to_objects:
-                https://raw.githubusercontent.com/radiantearth/stac-spec/master/examples/catalog.json: *id003
-                https://raw.githubusercontent.com/radiantearth/stac-spec/master/examples/extensions-collection/collection.json: &id004 !!python/object:pystac.collection.Collection
-                  _resolved_objects: !!python/object:pystac.cache.ResolvedObjectCache
-                    _collection_cache: null
-                    hrefs_to_objects:
-                      https://raw.githubusercontent.com/radiantearth/stac-spec/master/examples/extensions-collection/collection.json: *id004
-                    id_keys_to_objects: {}
-                    ids_to_collections:
-                      extensions-collection: *id004
-                  _stac_io: &id007 !!python/object:pystac.stac_io.DefaultStacIO {}
-                  assets: {}
-                  catalog_type: !!python/object/apply:pystac.catalog.CatalogType
-                  - SELF_CONTAINED
-                  description: A heterogenous collection containing deeper examples
-                    of various extensions
-                  extent: !!python/object:pystac.collection.Extent
-                    extra_fields: {}
-                    spatial: !!python/object:pystac.collection.SpatialExtent
-                      bboxes:
-                      - - -180
-                        - -56
-                        - 180
-                        - 83
-                      extra_fields: {}
-                    temporal: !!python/object:pystac.collection.TemporalExtent
-                      extra_fields: {}
-                      intervals:
-                      - - 2009-05-20 02:40:01.042784+00:00
-                        - 2018-11-03 23:59:55.112875+00:00
-                  extra_fields:
-                    keywords: &id005
-                    - examples
-                    - sar
-                    - projection
-                    providers:
-                    - name: Remote Data, Inc.
-                      roles: &id006
-                      - producer
-                      - licensor
-                      url: https://remotedata.io
-                    stac_extensions: []
-                    title: Collection of Extension Items
-                    type: Collection
-                  id: extensions-collection
-                  keywords: *id005
-                  license: PDDL-1.0
-                  links:
-                  - !!python/object:pystac.link.Link
-                    _target_href: https://raw.githubusercontent.com/radiantearth/stac-spec/master/examples/extensions-collection/collection.json
-                    _target_object: null
-                    extra_fields: {}
-                    media_type: !!python/object/apply:pystac.media_type.MediaType
-                    - application/json
-                    owner: *id004
-                    rel: !!python/object/apply:pystac.rel_type.RelType
-                    - self
-                    title: null
-                  - !!python/object:pystac.link.Link
-                    _target_href: ../catalog.json
-                    _target_object: null
-                    extra_fields: {}
-                    media_type: application/json
-                    owner: *id004
-                    rel: parent
-                    title: Example Catalog
-                  - !!python/object:pystac.link.Link
-                    _target_href: null
-                    _target_object: *id003
-                    extra_fields: {}
-                    media_type: !!python/object/apply:pystac.media_type.MediaType
-                    - application/json
-                    owner: *id004
-                    rel: !!python/object/apply:pystac.rel_type.RelType
-                    - root
-                    title: null
-                  - !!python/object:pystac.link.Link
-                    _target_href: ./proj-example/proj-example.json
-                    _target_object: *id001
-                    extra_fields: {}
-                    media_type: null
-                    owner: *id004
-                    rel: item
-                    title: Proj extension example
-                  - !!python/object:pystac.link.Link
-                    _target_href: https://remotedata.io/license.html
-                    _target_object: null
-                    extra_fields: {}
-                    media_type: null
-                    owner: *id004
-                    rel: license
-                    title: Remote Data License Terms
-                  providers:
-                  - !!python/object:pystac.provider.Provider
-                    description: null
-                    extra_fields: {}
-                    name: Remote Data, Inc.
-                    roles: *id006
-                    url: https://remotedata.io
-                  stac_extensions: []
-                  summaries: !!python/object:pystac.summaries.Summaries
-                    _summaries: {}
-                    lists: {}
-                    maxcount: 25
-                    other: {}
-                    ranges: {}
-                    schemas: {}
-                  title: Collection of Extension Items
-                ? https://raw.githubusercontent.com/radiantearth/stac-spec/master/examples/extensions-collection/proj-example/proj-example.json
-                : *id001
-              id_keys_to_objects: {}
-              ids_to_collections:
-                extensions-collection: *id004
-            _stac_io: *id007
-            catalog_type: !!python/object/apply:pystac.catalog.CatalogType
-            - RELATIVE_PUBLISHED
-            description: This catalog is a simple demonstration of an example catalog
-              that is used to organize a hierarchy of collections and their items.
-            extra_fields:
-              type: Catalog
-            id: examples
-            links:
-            - !!python/object:pystac.link.Link
-              _target_href: ./catalog.json
-              _target_object: null
-              extra_fields: {}
-              media_type: application/json
-              owner: *id003
-              rel: root
-              title: null
-            - !!python/object:pystac.link.Link
-              _target_href: ./extensions-collection/collection.json
-              _target_object: null
-              extra_fields: {}
-              media_type: application/json
-              owner: *id003
-              rel: child
-              title: Collection Demonstrating STAC Extensions
-            - !!python/object:pystac.link.Link
-              _target_href: ./collection-only/collection.json
-              _target_object: null
-              extra_fields: {}
-              media_type: application/json
-              owner: *id003
-              rel: child
-              title: Collection with no items (standalone)
-            - !!python/object:pystac.link.Link
-              _target_href: ./collection-only/collection-with-schemas.json
-              _target_object: null
-              extra_fields: {}
-              media_type: application/json
-              owner: *id003
-              rel: child
-              title: Collection with no items (standalone with JSON Schemas)
-            - !!python/object:pystac.link.Link
-              _target_href: ./collectionless-item.json
-              _target_object: null
-              extra_fields: {}
-              media_type: application/json
-              owner: *id003
-              rel: item
-              title: Collection with no items (standalone)
-            - !!python/object:pystac.link.Link
-              _target_href: https://raw.githubusercontent.com/radiantearth/stac-spec/master/examples/catalog.json
-              _target_object: null
-              extra_fields: {}
-              media_type: !!python/object/apply:pystac.media_type.MediaType
-              - application/json
-              owner: *id003
-              rel: !!python/object/apply:pystac.rel_type.RelType
-              - self
-              title: null
-            stac_extensions: []
-            title: Example Catalog
-          extra_fields: {}
-          media_type: !!python/object/apply:pystac.media_type.MediaType
-          - application/json
-          owner: *id001
-          rel: !!python/object/apply:pystac.rel_type.RelType
-          - root
-          title: null
-        - !!python/object:pystac.link.Link
-          _target_href: ../collection.json
-          _target_object: null
-          extra_fields: {}
-          media_type: application/json
-          owner: *id001
-          rel: collection
-          title: Collection of Extension Items
-        - !!python/object:pystac.link.Link
-          _target_href: https://raw.githubusercontent.com/radiantearth/stac-spec/master/examples/extensions-collection/proj-example/proj-example.json
-          _target_object: null
-          extra_fields: {}
-          media_type: !!python/object/apply:pystac.media_type.MediaType
-          - application/json
-          owner: *id001
-          rel: !!python/object/apply:pystac.rel_type.RelType
-          - self
-          title: null
-        - !!python/object:pystac.link.Link
-          _target_href: null
-          _target_object: *id004
-          extra_fields: {}
-          media_type: !!python/object/apply:pystac.media_type.MediaType
-          - application/json
-          owner: *id001
-          rel: !!python/object/apply:pystac.rel_type.RelType
-          - parent
-          title: null
-        properties:
-          datetime: '2018-10-01T01:08:32.033000Z'
-          proj:bbox: &id012
-          - 169200
-          - 3712800
-          - 403200
-          - 3951000
-          proj:centroid: &id013
-            lat: 34.595302781575604
-            lon: -101.34448382627504
-          proj:epsg: 32614
-          proj:geometry: &id014
-            coordinates:
-            - - - 169200
-                - 3712800
-              - - 403200
-                - 3712800
-              - - 403200
-                - 3951000
-              - - 169200
-                - 3951000
-              - - 169200
-                - 3712800
-            type: Polygon
-          proj:projjson: &id015
-            $schema: https://proj.org/schemas/v0.2/projjson.schema.json
-            area: "World - N hemisphere - 102\xB0W to 96\xB0W - by country"
-            base_crs:
-              coordinate_system:
-                axis:
-                - abbreviation: Lat
-                  direction: north
-                  name: Geodetic latitude
-                  unit: degree
-                - abbreviation: Lon
-                  direction: east
-                  name: Geodetic longitude
-                  unit: degree
-                subtype: ellipsoidal
-              datum:
-                ellipsoid:
-                  inverse_flattening: 298.257223563
-                  name: WGS 84
-                  semi_major_axis: 6378137
-                name: World Geodetic System 1984
-                type: GeodeticReferenceFrame
-              id:
-                authority: EPSG
-                code: 4326
-              name: WGS 84
-            bbox:
-              east_longitude: -96
-              north_latitude: 84
-              south_latitude: 0
-              west_longitude: -102
-            conversion:
-              method:
-                id:
-                  authority: EPSG
-                  code: 9807
-                name: Transverse Mercator
-              name: UTM zone 14N
-              parameters:
-              - id:
-                  authority: EPSG
-                  code: 8801
-                name: Latitude of natural origin
-                unit: degree
-                value: 0
-              - id:
-                  authority: EPSG
-                  code: 8802
-                name: Longitude of natural origin
-                unit: degree
-                value: -99
-              - id:
-                  authority: EPSG
-                  code: 8805
-                name: Scale factor at natural origin
-                unit: unity
-                value: 0.9996
-              - id:
-                  authority: EPSG
-                  code: 8806
-                name: False easting
-                unit: metre
-                value: 500000
-              - id:
-                  authority: EPSG
-                  code: 8807
-                name: False northing
-                unit: metre
-                value: 0
-            coordinate_system:
-              axis:
-              - abbreviation: E
-                direction: east
-                name: Easting
-                unit: metre
-              - abbreviation: N
-                direction: north
-                name: Northing
-                unit: metre
-              subtype: Cartesian
-            id:
-              authority: EPSG
-              code: 32614
-            name: WGS 84 / UTM zone 14N
-            type: ProjectedCRS
-          proj:shape: &id016
-          - 8391
-          - 8311
-          proj:transform: &id017
-          - 30
-          - 0
-          - 224985
-          - 0
-          - -30
-          - 6790215
-          - 0
-          - 0
-          - 1
-          proj:wkt2: PROJCS["WGS 84 / UTM zone 14N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS
-            84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],UNIT["metre",1,AUTHORITY["EPSG","9001"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-99],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],AUTHORITY["EPSG","32614"],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
-        stac_extensions: *id008
-    description: ''
-    driver: intake_stac.catalog.StacItem
+      chunks: {}
+      urlpath: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/LC08_L1TP_107018_20181001_20181001_01_RT_B1.TIF
+    description: Band 1 (coastal)
+    driver: intake_xarray.raster.RasterIOSource
     metadata:
-      bbox: *id009
       catalog_dir: ''
-      date: null
-      datetime: *id010
-      geometry: *id011
-      proj:bbox: *id012
-      proj:centroid: *id013
-      proj:epsg: 32614
-      proj:geometry: *id014
-      proj:projjson: *id015
-      proj:shape: *id016
-      proj:transform: *id017
-      proj:wkt2: PROJCS["WGS 84 / UTM zone 14N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS
-        84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],UNIT["metre",1,AUTHORITY["EPSG","9001"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-99],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],AUTHORITY["EPSG","32614"],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
+      eo:bands:
+      - center_wavelength: 0.44
+        common_name: coastal
+        full_width_half_max: 0.02
+        name: B1
+      href: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/LC08_L1TP_107018_20181001_20181001_01_RT_B1.TIF
+      plots:
+        geotiff:
+          cmap: viridis
+          data_aspect: 1
+          dynamic: true
+          frame_width: 500
+          kind: image
+          rasterize: true
+          x: x
+          y: y
+      title: Band 1 (coastal)
+      type: image/tiff; application=geotiff
+  B8:
+    args:
+      chunks: {}
+      urlpath: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/LC08_L1TP_107018_20181001_20181001_01_RT_B8.TIF
+    description: Band 8 (panchromatic)
+    driver: intake_xarray.raster.RasterIOSource
+    metadata:
+      catalog_dir: ''
+      eo:bands:
+      - center_wavelength: 0.59
+        full_width_half_max: 0.18
+        name: B8
+      href: https://landsat-pds.s3.amazonaws.com/c1/L8/107/018/LC08_L1TP_107018_20181001_20181001_01_RT/LC08_L1TP_107018_20181001_20181001_01_RT_B8.TIF
+      plots:
+        geotiff:
+          cmap: viridis
+          data_aspect: 1
+          dynamic: true
+          frame_width: 500
+          kind: image
+          rasterize: true
+          x: x
+          y: y
+      proj:shape:
+      - 16781
+      - 16621
+      proj:transform:
+      - 15
+      - 0
+      - 224992.5
+      - 0
+      - -15
+      - 6790207.5
+      - 0
+      - 0
+      - 1
+      title: Band 8 (panchromatic)
+      type: image/tiff; application=geotiff
